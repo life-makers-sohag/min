@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من جديد - تسجيل الدخول</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="تسجيل الدخول إلى منصة من جديد - منصة لمشاركة الاقتباسات والأفكار الملهمة">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- الشريط العلوي -->
+        <header class="navbar">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../img/logo.svg" alt="شعار من جديد">
+                </a>
+                <button class="navbar-toggler" id="navbarToggler" aria-label="فتح القائمة">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="navbar-nav" id="navbarNav">
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="#" class="nav-link">استكشاف</a></li>
+                    <li><a href="#" class="nav-link">عن المنصة</a></li>
+                    <li><a href="login.html" class="nav-link active">تسجيل الدخول</a></li>
+                    <li><a href="signup.html" class="btn btn-primary">إنشاء حساب</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- القسم الرئيسي -->
+        <main class="main-content">
+            <section class="auth-section">
+                <div class="container">
+                    <div class="row justify-center">
+                        <div class="col-md-6 col-lg-5">
+                            <div class="card shadow-lg fade-in-up">
+                                <div class="card-body p-lg">
+                                    <div class="text-center mb-lg">
+                                        <img src="../img/logo.svg" alt="شعار من جديد" class="auth-logo mb-md">
+                                        <h1 class="card-title">تسجيل الدخول</h1>
+                                        <p class="text-medium">مرحبًا بعودتك! سجل دخولك للمتابعة</p>
+                                    </div>
+                                    
+                                    <!-- نموذج تسجيل الدخول -->
+                                    <form id="loginForm" class="auth-form">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">البريد الإلكتروني</label>
+                                            <div class="input-group">
+                                                <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                                                <input type="email" id="email" name="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <div class="flex justify-between items-center">
+                                                <label for="password" class="form-label">كلمة المرور</label>
+                                                <a href="#" class="text-primary font-sm">نسيت كلمة المرور؟</a>
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                                                <input type="password" id="password" name="password" class="form-control" placeholder="أدخل كلمة المرور" required>
+                                                <button type="button" class="password-toggle" aria-label="إظهار/إخفاء كلمة المرور">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="rememberMe" name="rememberMe" class="form-check-input">
+                                                <label for="rememberMe" class="form-check-label">تذكرني</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">
+                                                <span class="btn-text">تسجيل الدخول</span>
+                                                <span class="loading hidden"></span>
+                                            </button>
+                                        </div>
+                                        
+                                        <div id="loginError" class="alert alert-error hidden"></div>
+                                    </form>
+                                    
+                                    <div class="auth-separator">
+                                        <span>أو</span>
+                                    </div>
+                                    
+                                    <div class="social-auth">
+                                        <button class="btn btn-outline-primary btn-block mb-sm">
+                                            <i class="fab fa-google"></i>
+                                            <span>تسجيل الدخول باستخدام Google</span>
+                                        </button>
+                                        <button class="btn btn-outline-primary btn-block">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <span>تسجيل الدخول باستخدام Facebook</span>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="auth-footer text-center mt-lg">
+                                        <p>ليس لديك حساب؟ <a href="signup.html" class="text-primary font-semibold">إنشاء حساب جديد</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- تذييل الصفحة -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>&copy; 2025 من جديد. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- النوافذ المنبثقة -->
+    <div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
+
+    <!-- سكريبت JavaScript -->
+    <script src="../js/ui.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

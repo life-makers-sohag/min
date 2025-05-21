@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من جديد - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="منصة من جديد - منصة لمشاركة الاقتباسات والأفكار الملهمة">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- الشريط العلوي -->
+        <header class="navbar">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.svg" alt="شعار من جديد">
+                </a>
+                <button class="navbar-toggler" id="navbarToggler" aria-label="فتح القائمة">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="navbar-nav" id="navbarNav">
+                    <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="#" class="nav-link">استكشاف</a></li>
+                    <li><a href="#" class="nav-link">عن المنصة</a></li>
+                    <li><a href="pages/login.html" class="nav-link">تسجيل الدخول</a></li>
+                    <li><a href="pages/signup.html" class="btn btn-primary">إنشاء حساب</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- القسم الرئيسي -->
+        <main class="main-content">
+            <!-- قسم الترحيب -->
+            <section class="hero-section bg-primary-light">
+                <div class="container">
+                    <div class="row items-center">
+                        <div class="col-md-6 fade-in-right">
+                            <h1 class="font-2xl">شارك أفكارك وألهم الآخرين <span class="text-primary">من جديد</span></h1>
+                            <p class="my-lg">منصة من جديد هي مساحة لمشاركة الاقتباسات والأفكار الملهمة مع مجتمع متفاعل. سجل الآن وابدأ رحلتك في مشاركة الإلهام.</p>
+                            <div class="flex gap-md">
+                           <a href="pages/signup.html" class="btn btn-outline-primary">إنشاء حساب</a>
+                                <a href="pages/login.html" class="btn btn-outline-primary">تسجيل الدخول</a>                          </div>
+                        </div>
+                        <div class="col-md-6 text-center fade-in-left">
+                            <img src="img/hero-illustration.svg" alt="رسم توضيحي" class="hero-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- قسم الاقتباسات المميزة -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <h2 class="section-title mx-auto">اقتباسات مميزة</h2>
+                        <p class="section-subtitle">استكشف أحدث الاقتباسات الملهمة من مجتمعنا</p>
+                    </div>
+                    
+                    <div class="cards-grid" id="featuredQuotes">
+                        <!-- ستتم إضافة البطاقات ديناميكيًا من خلال JavaScript -->
+                        <!-- نموذج لبطاقة اقتباس -->
+                        <div class="card quote-card fade-in-up">
+                            <div class="quote-card-header">
+                                <img src="../img/avatar-1.jpg" alt="صورة المستخدم" class="quote-card-avatar">
+                                <div>
+                                    <h4 class="quote-card-author">أحمد محمود</h4>
+                                    <p class="text-medium font-sm">منذ 3 أيام</p>
+                                </div>
+                            </div>
+                            <p class="card-text">"الحياة ليست عن انتظار العاصفة لتمر، بل عن تعلم الرقص في المطر."</p>
+                            <div class="quote-card-meta">
+                                <div class="flex gap-sm items-center">
+                                    <button class="btn-icon" aria-label="إعجاب">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>24</span>
+                                </div>
+                                <div class="flex gap-sm items-center">
+                                    <button class="btn-icon" aria-label="مشاركة">
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card quote-card fade-in-up" style="animation-delay: 0.2s;">
+                            <div class="quote-card-header">
+                                <img src="../img/avatar-2.jpg" alt="صورة المستخدم" class="quote-card-avatar">
+                                <div>
+                                    <h4 class="quote-card-author">سارة أحمد</h4>
+                                    <p class="text-medium font-sm">منذ 5 أيام</p>
+                                </div>
+                            </div>
+                            <p class="card-text">"النجاح ليس نهائيًا، والفشل ليس قاتلًا، الشجاعة للاستمرار هي ما يهم."</p>
+                            <div class="quote-card-meta">
+                                <div class="flex gap-sm items-center">
+                                    <button class="btn-icon" aria-label="إعجاب">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>42</span>
+                                </div>
+                                <div class="flex gap-sm items-center">
+                                    <button class="btn-icon" aria-label="مشاركة">
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card quote-card fade-in-up" style="animation-delay: 0.4s;">
+                            <div class="quote-card-header">
+                                <img src="../img/avatar-3.jpg" alt="صورة المستخدم" class="quote-card-avatar">
+                                <div>
+                                    <h4 class="quote-card-author">محمد علي</h4>
+                                    <p class="text-medium font-sm">منذ أسبوع</p>
+                                </div>
+                            </div>
+                            <p class="card-text">"لا تقارن نفسك بالآخرين، قارن نفسك بالشخص الذي كنته بالأمس."</p>
+                            <div class="quote-card-meta">
+                                <div class="flex gap-sm items-center">
+                                    <button class="btn-icon" aria-label="إعجاب">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>36</span>
+                                </div>
+                                <div class="flex gap-sm items-center">
+                                    <button class="btn-icon" aria-label="مشاركة">
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                    <span>8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-xl">
+                        <a href="#" class="btn btn-outline-primary">عرض المزيد من الاقتباسات</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- قسم المميزات -->
+            <section class="section bg-light">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <h2 class="section-title mx-auto">لماذا من جديد؟</h2>
+                        <p class="section-subtitle">اكتشف مميزات منصتنا الفريدة</p>
+                    </div>
+                    
+                    <div class="three-columns">
+                        <div class="feature-card text-center fade-in-up">
+                            <div class="feature-icon bg-primary-light p-md rounded-full mx-auto">
+                                <i class="fas fa-quote-right text-primary font-2xl"></i>
+                            </div>
+                            <h3 class="my-md">شارك أفكارك</h3>
+                            <p>عبر عن أفكارك وشارك اقتباساتك المفضلة مع مجتمع متفاعل يقدر الإلهام والإبداع.</p>
+                        </div>
+                        
+                        <div class="feature-card text-center fade-in-up" style="animation-delay: 0.2s;">
+                            <div class="feature-icon bg-secondary-light p-md rounded-full mx-auto">
+                                <i class="fas fa-users text-secondary font-2xl"></i>
+                            </div>
+                            <h3 class="my-md">تواصل مع المجتمع</h3>
+                            <p>تفاعل مع أشخاص يشاركونك نفس الاهتمامات وتبادل الأفكار والإلهام معهم.</p>
+                        </div>
+                        
+                        <div class="feature-card text-center fade-in-up" style="animation-delay: 0.4s;">
+                            <div class="feature-icon bg-accent-light p-md rounded-full mx-auto">
+                                <i class="fas fa-lightbulb text-accent font-2xl"></i>
+                            </div>
+                            <h3 class="my-md">استلهم أفكارًا جديدة</h3>
+                            <p>اكتشف اقتباسات ملهمة من مختلف المجالات لتوسيع آفاقك وإلهام إبداعك.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- قسم الانضمام -->
+            <section class="section cta-section bg-primary">
+                <div class="container text-center">
+                    <h2 class="text-white mb-md">انضم إلى مجتمع من جديد اليوم</h2>
+                    <p class="text-white mb-lg">شارك في بناء مجتمع ملهم وكن جزءًا من رحلة الإلهام والإبداع.</p>
+                    <a href="pages/signup.html" class="btn btn-light">إنشاء حساب مجاني</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- تذييل الصفحة -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="footer-title">من جديد</h3>
+                        <p class="text-light">منصة لمشاركة الاقتباسات والأفكار الملهمة مع مجتمع متفاعل.</p>
+                        <div class="social-links flex gap-sm mt-md">
+                            <a href="#" class="social-link" aria-label="فيسبوك">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="تويتر">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="انستغرام">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="لينكد إن">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <h4 class="footer-title">روابط سريعة</h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">الرئيسية</a></li>
+                            <li><a href="#" class="footer-link">استكشاف</a></li>
+                            <li><a href="#" class="footer-link">عن المنصة</a></li>
+                            <li><a href="#" class="footer-link">تسجيل الدخول</a></li>
+                            <li><a href="#" class="footer-link">إنشاء حساب</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h4 class="footer-title">الدعم</h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">الأسئلة الشائعة</a></li>
+                            <li><a href="#" class="footer-link">اتصل بنا</a></li>
+                            <li><a href="#" class="footer-link">سياسة الخصوصية</a></li>
+                            <li><a href="#" class="footer-link">شروط الاستخدام</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="footer-title">النشرة البريدية</h4>
+                        <p class="text-light">اشترك في نشرتنا البريدية للحصول على آخر الأخبار والتحديثات.</p>
+                        <form class="newsletter-form mt-md">
+                            <div class="flex">
+                                <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                                <button type="submit" class="btn btn-primary">اشتراك</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 من جديد. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- النوافذ المنبثقة -->
+    <div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
+
+    <!-- سكريبت JavaScript -->
+    <script src="js/ui.js"></script>
+    <script src="js/quotes.js"></script>
+</body>
+</html>

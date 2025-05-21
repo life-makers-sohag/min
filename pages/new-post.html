@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من جديد - إضافة اقتباس جديد</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="إضافة اقتباس جديد في منصة من جديد - منصة لمشاركة الاقتباسات والأفكار الملهمة">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- الشريط العلوي -->
+        <header class="navbar">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../img/logo.svg" alt="شعار من جديد">
+                </a>
+                <button class="navbar-toggler" id="navbarToggler" aria-label="فتح القائمة">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="navbar-nav" id="navbarNav">
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="#" class="nav-link">استكشاف</a></li>
+                    <li><a href="#" class="nav-link">عن المنصة</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <img src="../img/avatar-default.jpg" alt="الصورة الشخصية" class="avatar-sm">
+                            <span id="userNameDisplay">أحمد محمود</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fas fa-user"></i>
+                                <span>الملف الشخصي</span>
+                            </a>
+                            <a href="new-post.html" class="dropdown-item active">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>إضافة اقتباس</span>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-cog"></i>
+                                <span>الإعدادات</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item text-error" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>تسجيل الخروج</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- القسم الرئيسي -->
+        <main class="main-content">
+            <section class="new-post-section">
+                <div class="container">
+                    <div class="row justify-center">
+                        <div class="col-md-8 col-lg-6">
+                            <div class="card shadow-lg fade-in-up">
+                                <div class="card-body p-lg">
+                                    <div class="text-center mb-lg">
+                                        <h1 class="card-title">إضافة اقتباس جديد</h1>
+                                        <p class="text-medium">شارك أفكارك واقتباساتك المفضلة مع مجتمع من جديد</p>
+                                    </div>
+                                    
+                                    <!-- نموذج إضافة اقتباس -->
+                                    <form id="newQuoteForm" class="new-quote-form">
+                                        <div class="form-group">
+                                            <label for="quoteText" class="form-label">نص الاقتباس</label>
+                                            <textarea id="quoteText" name="quoteText" class="form-control" rows="5" placeholder="اكتب اقتباسك هنا..." required></textarea>
+                                            <div class="character-counter">
+                                                <span id="charCount">0</span> / 500 حرف
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="quoteAuthor" class="form-label">المؤلف (اختياري)</label>
+                                            <input type="text" id="quoteAuthor" name="quoteAuthor" class="form-control" placeholder="اسم مؤلف الاقتباس (إذا كان معروفًا)">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="quoteSource" class="form-label">المصدر (اختياري)</label>
+                                            <input type="text" id="quoteSource" name="quoteSource" class="form-control" placeholder="مصدر الاقتباس (كتاب، مقال، فيلم، إلخ)">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="quoteTags" class="form-label">الوسوم (اختياري)</label>
+                                            <input type="text" id="quoteTags" name="quoteTags" class="form-control" placeholder="أضف وسومًا مفصولة بفواصل (مثال: حكمة، نجاح، إلهام)">
+                                            <div class="form-text">أضف وسومًا لمساعدة الآخرين في العثور على اقتباسك</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="originalContent" name="originalContent" class="form-check-input">
+                                                <label for="originalContent" class="form-check-label">هذا محتوى أصلي من تأليفي</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">
+                                                <span class="btn-text">نشر الاقتباس</span>
+                                                <span class="loading hidden"></span>
+                                            </button>
+                                        </div>
+                                        
+                                        <div id="quoteError" class="alert alert-error hidden"></div>
+                                    </form>
+                                    
+                                    <div class="quote-preview-section mt-xl hidden" id="quotePreview">
+                                        <h3 class="mb-md">معاينة الاقتباس</h3>
+                                        <div class="card quote-card">
+                                            <div class="quote-card-header">
+                                                <img src="../img/avatar-default.jpg" alt="صورة المستخدم" class="quote-card-avatar">
+                                                <div>
+                                                    <h4 class="quote-card-author" id="previewUserName">أحمد محمود</h4>
+                                                    <p class="text-medium font-sm">الآن</p>
+                                                </div>
+                                            </div>
+                                            <p class="card-text" id="previewQuoteText"></p>
+                                            <p class="quote-attribution" id="previewAttribution"></p>
+                                            <div class="quote-tags" id="previewTags"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- تذييل الصفحة -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>&copy; 2025 من جديد. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- النوافذ المنبثقة -->
+    <div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
+
+    <!-- سكريبت JavaScript -->
+    <script src="../js/ui.js"></script>
+    <script src="../js/quotes.js"></script>
+</body>
+</html>

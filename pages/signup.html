@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من جديد - إنشاء حساب جديد</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="إنشاء حساب جديد في منصة من جديد - منصة لمشاركة الاقتباسات والأفكار الملهمة">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- الشريط العلوي -->
+        <header class="navbar">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../img/logo.svg" alt="شعار من جديد">
+                </a>
+                <button class="navbar-toggler" id="navbarToggler" aria-label="فتح القائمة">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="navbar-nav" id="navbarNav">
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="#" class="nav-link">استكشاف</a></li>
+                    <li><a href="#" class="nav-link">عن المنصة</a></li>
+                    <li><a href="login.html" class="nav-link">تسجيل الدخول</a></li>
+                    <li><a href="signup.html" class="btn btn-primary active">إنشاء حساب</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- القسم الرئيسي -->
+        <main class="main-content">
+            <section class="auth-section">
+                <div class="container">
+                    <div class="row justify-center">
+                        <div class="col-md-8 col-lg-6">
+                            <div class="card shadow-lg fade-in-up">
+                                <div class="card-body p-lg">
+                                    <div class="text-center mb-lg">
+                                        <img src="../img/logo.svg" alt="شعار من جديد" class="auth-logo mb-md">
+                                        <h1 class="card-title">إنشاء حساب جديد</h1>
+                                        <p class="text-medium">انضم إلى مجتمع من جديد وشارك أفكارك مع العالم</p>
+                                    </div>
+                                    
+                                    <!-- نموذج إنشاء حساب -->
+                                    <form id="signupForm" class="auth-form">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="firstName" class="form-label">الاسم الأول</label>
+                                                    <div class="input-group">
+                                                        <span class="input-icon"><i class="fas fa-user"></i></span>
+                                                        <input type="text" id="firstName" name="firstName" class="form-control" placeholder="أدخل اسمك الأول" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="lastName" class="form-label">الاسم الأخير</label>
+                                                    <div class="input-group">
+                                                        <span class="input-icon"><i class="fas fa-user"></i></span>
+                                                        <input type="text" id="lastName" name="lastName" class="form-control" placeholder="أدخل اسمك الأخير" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">البريد الإلكتروني</label>
+                                            <div class="input-group">
+                                                <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                                                <input type="email" id="email" name="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                                            </div>
+                                            <div id="emailError" class="form-error hidden">البريد الإلكتروني مستخدم بالفعل</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="password" class="form-label">كلمة المرور</label>
+                                            <div class="input-group">
+                                                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                                                <input type="password" id="password" name="password" class="form-control" placeholder="أدخل كلمة المرور" required>
+                                                <button type="button" class="password-toggle" aria-label="إظهار/إخفاء كلمة المرور">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="password-strength mt-xs hidden">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 0%"></div>
+                                                </div>
+                                                <p class="font-xs mt-xs">قوة كلمة المرور: <span class="strength-text">ضعيفة</span></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="confirmPassword" class="form-label">تأكيد كلمة المرور</label>
+                                            <div class="input-group">
+                                                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                                                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="أعد إدخال كلمة المرور" required>
+                                            </div>
+                                            <div id="passwordMatchError" class="form-error hidden">كلمات المرور غير متطابقة</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="linkedinUrl" class="form-label">رابط حساب LinkedIn</label>
+                                            <div class="input-group">
+                                                <span class="input-icon"><i class="fab fa-linkedin"></i></span>
+                                                <input type="url" id="linkedinUrl" name="linkedinUrl" class="form-control" placeholder="أدخل رابط حساب LinkedIn الخاص بك" required>
+                                            </div>
+                                            <div class="form-text">سيتم عرض هذا الرابط في ملفك الشخصي</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="termsAgreement" name="termsAgreement" class="form-check-input" required>
+                                                <label for="termsAgreement" class="form-check-label">أوافق على <a href="#" class="text-primary">شروط الاستخدام</a> و <a href="#" class="text-primary">سياسة الخصوصية</a></label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">
+                                                <span class="btn-text">إنشاء حساب</span>
+                                                <span class="loading hidden"></span>
+                                            </button>
+                                        </div>
+                                        
+                                        <div id="signupError" class="alert alert-error hidden"></div>
+                                    </form>
+                                    
+                                    <div class="auth-separator">
+                                        <span>أو</span>
+                                    </div>
+                                    
+                                    <div class="social-auth">
+                                        <button class="btn btn-outline-primary btn-block mb-sm">
+                                            <i class="fab fa-google"></i>
+                                            <span>التسجيل باستخدام Google</span>
+                                        </button>
+                                        <button class="btn btn-outline-primary btn-block">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <span>التسجيل باستخدام Facebook</span>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="auth-footer text-center mt-lg">
+                                        <p>لديك حساب بالفعل؟ <a href="login.html" class="text-primary font-semibold">تسجيل الدخول</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- تذييل الصفحة -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>&copy; 2025 من جديد. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- النوافذ المنبثقة -->
+    <div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
+
+    <!-- سكريبت JavaScript -->
+    <script src="../js/ui.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

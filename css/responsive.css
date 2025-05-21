@@ -1,0 +1,458 @@
+/* 
+* responsive.css - ملف الاستجابة لمنصة Min Jadeed
+* 
+* هذا الملف يحتوي على أنماط الاستجابة لمختلف أحجام الشاشات
+* يضمن تجربة مستخدم متناسقة على جميع الأجهزة
+*/
+
+/* الأجهزة الكبيرة (أجهزة الكمبيوتر المكتبية، 1200px وما فوق) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+  
+  .hide-xl {
+    display: none !important;
+  }
+  
+  .show-xl {
+    display: block !important;
+  }
+  
+  .text-xl-center {
+    text-align: center !important;
+  }
+  
+  .text-xl-right {
+    text-align: right !important;
+  }
+  
+  .text-xl-left {
+    text-align: left !important;
+  }
+}
+
+/* الأجهزة المتوسطة (أجهزة اللوحية الأفقية، 992px وما فوق) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+  
+  .hide-lg {
+    display: none !important;
+  }
+  
+  .show-lg {
+    display: block !important;
+  }
+  
+  .text-lg-center {
+    text-align: center !important;
+  }
+  
+  .text-lg-right {
+    text-align: right !important;
+  }
+  
+  .text-lg-left {
+    text-align: left !important;
+  }
+  
+  /* تعديلات الشبكة */
+  .col-lg-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-lg-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-lg-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-lg-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-lg-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-lg-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-lg-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-lg-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-lg-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-lg-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* الأجهزة الصغيرة (أجهزة اللوحية العمودية، 768px وما فوق) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: var(--container-md);
+  }
+  
+  .hide-md {
+    display: none !important;
+  }
+  
+  .show-md {
+    display: block !important;
+  }
+  
+  .text-md-center {
+    text-align: center !important;
+  }
+  
+  .text-md-right {
+    text-align: right !important;
+  }
+  
+  .text-md-left {
+    text-align: left !important;
+  }
+  
+  /* تعديلات الشبكة */
+  .col-md-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-md-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-md-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-md-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-md-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-md-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-md-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-md-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-md-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-md-12 { flex: 0 0 100%; max-width: 100%; }
+  
+  /* تعديلات التخطيط */
+  .sidebar-layout, 
+  .sidebar-layout-left {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .two-columns {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .three-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* تعديلات البطاقات */
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  /* تعديلات القائمة */
+  .navbar-brand {
+    font-size: var(--font-size-lg);
+  }
+  
+  .navbar-brand img {
+    height: 32px;
+  }
+}
+
+/* الأجهزة الصغيرة جداً (الهواتف المحمولة، أقل من 768px) */
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 100%;
+    padding-right: var(--spacing-md);
+    padding-left: var(--spacing-md);
+  }
+  
+  .hide-sm {
+    display: none !important;
+  }
+  
+  .show-sm {
+    display: block !important;
+  }
+  
+  .text-sm-center {
+    text-align: center !important;
+  }
+  
+  .text-sm-right {
+    text-align: right !important;
+  }
+  
+  .text-sm-left {
+    text-align: left !important;
+  }
+  
+  /* تعديلات الشبكة */
+  .col-sm-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-sm-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-sm-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-sm-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-sm-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-sm-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-sm-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-sm-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-sm-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-sm-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-sm-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-sm-12 { flex: 0 0 100%; max-width: 100%; }
+  
+  /* تعديلات التخطيط */
+  .sidebar-layout, 
+  .sidebar-layout-left {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .two-columns,
+  .three-columns {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* تعديلات البطاقات */
+  .cards-grid,
+  .cards-grid-sm,
+  .cards-grid-lg {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* تعديلات القائمة */
+  .navbar {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .navbar-brand {
+    font-size: var(--font-size-md);
+  }
+  
+  .navbar-brand img {
+    height: 28px;
+  }
+  
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-md);
+    z-index: var(--z-dropdown);
+  }
+  
+  .navbar-nav.show {
+    display: flex;
+  }
+  
+  .navbar-toggler {
+    display: block;
+  }
+  
+  /* تعديلات النماذج */
+  .form-group {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  /* تعديلات النوافذ المنبثقة */
+  .modal {
+    width: 95%;
+    max-width: 100%;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: var(--spacing-md);
+  }
+  
+  /* تعديلات الأزرار */
+  .btn-block-sm {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* تعديلات التبويبات */
+  .tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    flex: 1 0 auto;
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+/* الهواتف الصغيرة (أقل من 576px) */
+@media (max-width: 575.98px) {
+  .hide-xs {
+    display: none !important;
+  }
+  
+  .show-xs {
+    display: block !important;
+  }
+  
+  .text-xs-center {
+    text-align: center !important;
+  }
+  
+  .text-xs-right {
+    text-align: right !important;
+  }
+  
+  .text-xs-left {
+    text-align: left !important;
+  }
+  
+  /* تعديلات الشبكة */
+  .col-xs-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-xs-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-xs-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-xs-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-xs-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-xs-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-xs-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-xs-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-xs-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-xs-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-xs-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-xs-12 { flex: 0 0 100%; max-width: 100%; }
+  
+  /* تعديلات التخطيط */
+  .section {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .section-header {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* تعديلات العناوين */
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+  
+  /* تعديلات البطاقات */
+  .card {
+    border-radius: var(--border-radius-md);
+  }
+  
+  .card-body {
+    padding: var(--spacing-md);
+  }
+  
+  /* تعديلات النوافذ المنبثقة */
+  .modal-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  /* تعديلات التنبيهات */
+  .alert {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  /* تعديلات الإشعارات */
+  .notification {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+    transform: translateX(0);
+  }
+}
+
+/* تعديلات الاتجاه (عمودي/أفقي) */
+@media (orientation: portrait) {
+  .hide-portrait {
+    display: none !important;
+  }
+  
+  .show-portrait {
+    display: block !important;
+  }
+}
+
+@media (orientation: landscape) {
+  .hide-landscape {
+    display: none !important;
+  }
+  
+  .show-landscape {
+    display: block !important;
+  }
+}
+
+/* تعديلات الطباعة */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+  
+  .card,
+  .alert,
+  .btn {
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+  
+  .navbar,
+  .footer,
+  .sidebar {
+    display: none;
+  }
+  
+  .main-content {
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+/* تعديلات وضع الظلام (للتطوير المستقبلي) */
+@media (prefers-color-scheme: dark) {
+  /* سيتم تعريف أنماط وضع الظلام هنا في المستقبل */
+}
+
+/* تعديلات تفضيلات الحركة المخفضة */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

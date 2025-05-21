@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="url(#logo-gradient)" d="M40 10h120c5.523 0 10 4.477 10 10v20c0 5.523-4.477 10-10 10H40c-5.523 0-10-4.477-10-10V20c0-5.523 4.477-10 10-10z" />
+    <text x="100" y="35" font-family="Tajawal, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">من جديد</text>
+  </g>
+</svg>
